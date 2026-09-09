@@ -1,0 +1,20 @@
+audit_item,detail,value,status,notes
+benchmark_name,NIFTYBEES,ETF proxy for NIFTY 50,PASS,Correctly named in all code/docs
+benchmark_source,Bhavcopy,Same source as equity prices,PASS,
+benchmark_type,ETF,Not official index,PASS,Tracking error ~0.1-0.3% annually
+official_nifty50_price_index,Unavailable,Not in Bhavcopy,KNOWN_LIMITATION,
+official_nifty50_tri,Unavailable,Not in Bhavcopy,KNOWN_LIMITATION,
+terminology_check,No "NIFTY 50 index" references,Verified,PASS,All code/docs use "NIFTYBEES"
+feature_benchmark_return_1d_after,Target,Uses NIFTYBEES raw prices,PASS,Subject to corporate actions
+feature_benchmark_return_3d_after,Target,Uses NIFTYBEES raw prices,PASS,Subject to corporate actions
+feature_benchmark_return_5d_after,Target,Uses NIFTYBEES raw prices,PASS,Subject to corporate actions
+feature_relative_return_1d,Feature,Stock - NIFTYBEES,PASS,ETF tracking error adds noise
+feature_relative_return_3d,Feature,Stock - NIFTYBEES,PASS,ETF tracking error adds noise
+feature_relative_return_5d,Feature,Stock - NIFTYBEES,PASS,ETF tracking error adds noise
+feature_relative_return_10d,Feature,Stock - NIFTYBEES,PASS,ETF tracking error adds noise
+feature_relative_return_20d,Feature,Stock - NIFTYBEES,PASS,ETF tracking error adds noise
+feature_relative_return_60d,Feature,Stock - NIFTYBEES,PASS,ETF tracking error adds noise
+tracking_error_estimate,~0.1-0.3% annually,Documented,PASS,
+dividend_handling,ETF reinvests in NAV,Documented,PASS,Different from price index
+corporate_actions_on_benchmark,Unit splits only,Documented,PASS,Affects raw returns
+production_recommendation,Add official index when available,FUTURE,NOT_DONE,

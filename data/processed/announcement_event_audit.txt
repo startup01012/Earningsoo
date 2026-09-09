@@ -1,0 +1,535 @@
+======================================================================
+ANNOUNCEMENT EVENT AUDIT
+======================================================================
+
+OBJECTIVE
+---------
+Verify canonical announcement events for:
+- Announcement timestamp accuracy
+- Announcement type classification
+- Actual result vs board/approval/pre-announcement
+- Event period alignment
+
+======================================================================
+ANNOUNCEMENT CLASSIFICATION
+======================================================================
+  ACTUAL_RESULT: 3292 events (87.4%)
+  UNCERTAIN: 466 events (12.4%)
+  BOARD_EVENT: 7 events (0.2%)
+
+UNCERTAIN EVENTS (466):
+  ADANIENT_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  ADANIENT_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  ADANIENT_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  ADANIENT_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  ADANIENT_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  ADANIENT_2026-03-31: period=2026-03-31 00:00:00, ann=NaT, days_diff=nan
+  ADANIENT_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  ADANIPORTS_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  ADANIPORTS_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  ADANIPORTS_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  APOLLOHOSP_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  APOLLOHOSP_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  APOLLOHOSP_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  APOLLOHOSP_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  APOLLOHOSP_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  APOLLOHOSP_2006-09-30: period=2006-09-30 00:00:00, ann=2007-01-24 16:32:00, days_diff=116.0
+  APOLLOHOSP_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  APOLLOHOSP_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2004-03-31: period=2004-03-31 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  ASIANPAINT_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  AXISBANK_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  AXISBANK_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  AXISBANK_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  AXISBANK_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  AXISBANK_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  AXISBANK_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  AXISBANK_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  AXISBANK_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  BAJAJ-AUTO_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJAJ-AUTO_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  BAJAJ-AUTO_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2008-09-30: period=2008-09-30 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2008-12-31: period=2008-12-31 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2009-03-31: period=2009-03-31 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2009-06-30: period=2009-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2009-09-30: period=2009-09-30 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2009-12-31: period=2009-12-31 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2010-06-30: period=2010-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJAJFINSV_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2007-06-30: period=2007-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2007-09-30: period=2007-09-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2007-12-31: period=2007-12-31 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2008-06-30: period=2008-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2008-12-31: period=2008-12-31 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2009-06-30: period=2009-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2009-09-30: period=2009-09-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2009-12-31: period=2009-12-31 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2010-03-31: period=2010-03-31 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2010-06-30: period=2010-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  BAJFINANCE_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  BEL_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  BEL_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  BEL_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  BEL_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  BEL_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  BEL_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  BHARTIARTL_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  CIPLA_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  CIPLA_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  CIPLA_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  CIPLA_2007-03-31: period=2007-03-31 00:00:00, ann=2007-07-20 16:22:00, days_diff=111.0
+  CIPLA_2008-03-31: period=2008-03-31 00:00:00, ann=2008-07-18 16:32:00, days_diff=109.0
+  CIPLA_2009-03-31: period=2009-03-31 00:00:00, ann=2009-07-15 16:10:00, days_diff=106.0
+  CIPLA_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  CIPLA_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  CIPLA_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  CIPLA_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  COALINDIA_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  COALINDIA_2026-06-30: period=2026-06-30 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  DRREDDY_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2004-09-30: period=2004-09-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2007-12-31: period=2007-12-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2008-06-30: period=2008-06-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2009-03-31: period=2009-03-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2009-06-30: period=2009-06-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2009-09-30: period=2009-09-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2010-03-31: period=2010-03-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2010-06-30: period=2010-06-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  EICHERMOT_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2025-06-30: period=2025-06-30 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2025-09-30: period=2025-09-30 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2025-12-31: period=2025-12-31 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2026-03-31: period=2026-03-31 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2026-06-30: period=2026-06-30 00:00:00, ann=NaT, days_diff=nan
+  ETERNAL_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  GRASIM_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2004-09-30: period=2004-09-30 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2007-09-30: period=2007-09-30 00:00:00, ann=NaT, days_diff=nan
+  HCLTECH_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  HDFCBANK_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  HDFCBANK_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  HDFCBANK_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  HDFCBANK_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  HDFCBANK_2021-12-31: period=2021-12-31 00:00:00, ann=NaT, days_diff=nan
+  HDFCBANK_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  HDFCBANK_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  HDFCLIFE_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  HDFCLIFE_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  HDFCLIFE_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2009-03-31: period=2009-03-31 00:00:00, ann=2009-06-30 14:44:00, days_diff=91.0
+  HINDALCO_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  HINDALCO_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2025-06-30: period=2025-06-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2025-09-30: period=2025-09-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2025-12-31: period=2025-12-31 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2026-06-30: period=2026-06-30 00:00:00, ann=NaT, days_diff=nan
+  HINDUNILVR_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  ICICIBANK_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  INDIGO_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  INDIGO_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  INFY_2004-09-30: period=2004-09-30 00:00:00, ann=NaT, days_diff=nan
+  INFY_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  INFY_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  INFY_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  INFY_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  INFY_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  INFY_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  INFY_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  INFY_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  INFY_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  INFY_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  INFY_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  INFY_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  ITC_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  ITC_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  ITC_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  ITC_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  ITC_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  ITC_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  ITC_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  ITC_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  JIOFIN_2025-06-30: period=2025-06-30 00:00:00, ann=NaT, days_diff=nan
+  JIOFIN_2025-09-30: period=2025-09-30 00:00:00, ann=NaT, days_diff=nan
+  JIOFIN_2026-03-31: period=2026-03-31 00:00:00, ann=NaT, days_diff=nan
+  JIOFIN_2026-06-30: period=2026-06-30 00:00:00, ann=NaT, days_diff=nan
+  JIOFIN_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  JSWSTEEL_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  KOTAKBANK_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  LT_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  LT_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  LT_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  LT_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  LT_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  LT_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  LT_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  LT_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  LT_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  LT_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  LT_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  LT_2026-03-31: period=2026-03-31 00:00:00, ann=NaT, days_diff=nan
+  LT_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  M&M_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  M&M_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  M&M_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  M&M_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  M&M_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  M&M_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  M&M_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  M&M_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  M&M_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  M&M_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  M&M_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  M&M_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  M&M_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  M&M_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2004-09-30: period=2004-09-30 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  MARUTI_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  MAXHEALTH_2020-06-30: period=2020-06-30 00:00:00, ann=NaT, days_diff=nan
+  MAXHEALTH_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  MAXHEALTH_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  NESTLEIND_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  NESTLEIND_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2004-09-30: period=2004-09-30 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  NTPC_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2019-03-31: period=2019-03-31 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2020-03-31: period=2020-03-31 00:00:00, ann=2020-06-30 18:10:03, days_diff=91.0
+  ONGC_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  ONGC_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  POWERGRID_2008-03-31: period=2008-03-31 00:00:00, ann=NaT, days_diff=nan
+  POWERGRID_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  POWERGRID_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  POWERGRID_2025-12-31: period=2025-12-31 00:00:00, ann=NaT, days_diff=nan
+  POWERGRID_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  RELIANCE_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  RELIANCE_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  RELIANCE_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  RELIANCE_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  RELIANCE_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  RELIANCE_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  RELIANCE_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  RELIANCE_2007-03-31: period=2007-03-31 00:00:00, ann=2007-09-10 17:11:00, days_diff=163.0
+  RELIANCE_2009-03-31: period=2009-03-31 00:00:00, ann=2009-10-07 17:08:00, days_diff=190.0
+  RELIANCE_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  SBILIFE_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  SBILIFE_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  SBILIFE_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2004-06-30: period=2004-06-30 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2004-09-30: period=2004-09-30 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2006-12-31: period=2006-12-31 00:00:00, ann=2008-02-04 19:27:00, days_diff=400.0
+  SBIN_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  SBIN_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2007-12-31: period=2007-12-31 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2008-09-30: period=2008-09-30 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2008-12-31: period=2008-12-31 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2009-09-30: period=2009-09-30 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2009-12-31: period=2009-12-31 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  SHRIRAMFIN_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  SUNPHARMA_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  SUNPHARMA_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  SUNPHARMA_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  SUNPHARMA_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  SUNPHARMA_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  SUNPHARMA_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  SUNPHARMA_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  SUNPHARMA_2026-06-30: period=2026-06-30 00:00:00, ann=NaT, days_diff=nan
+  TATACONSUM_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  TATACONSUM_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  TATACONSUM_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  TATACONSUM_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  TATACONSUM_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  TATACONSUM_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  TATACONSUM_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  TATACONSUM_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  TATASTEEL_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  TATASTEEL_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  TATASTEEL_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  TATASTEEL_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  TATASTEEL_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  TATASTEEL_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  TCS_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  TCS_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  TCS_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  TCS_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  TCS_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  TCS_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  TCS_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  TCS_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  TCS_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  TCS_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  TCS_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  TCS_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  TCS_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  TECHM_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  TECHM_2007-12-31: period=2007-12-31 00:00:00, ann=NaT, days_diff=nan
+  TECHM_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  TECHM_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  TECHM_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  TITAN_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  TITAN_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  TITAN_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  TITAN_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  TITAN_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2004-09-30: period=2004-09-30 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2004-12-31: period=2004-12-31 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2015-05-02: period=2015-05-02 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  TMPV_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2005-06-30: period=2005-06-30 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2007-06-30: period=2007-06-30 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2025-06-30: period=2025-06-30 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2025-09-30: period=2025-09-30 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2025-12-31: period=2025-12-31 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2026-03-31: period=2026-03-31 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2026-06-30: period=2026-06-30 00:00:00, ann=NaT, days_diff=nan
+  TRENT_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+  ULTRACEMCO_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  ULTRACEMCO_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  ULTRACEMCO_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  ULTRACEMCO_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  ULTRACEMCO_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  ULTRACEMCO_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2004-09-30: period=2004-09-30 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2005-03-31: period=2005-03-31 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2005-09-30: period=2005-09-30 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2005-12-31: period=2005-12-31 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2006-03-31: period=2006-03-31 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2006-06-30: period=2006-06-30 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2006-09-30: period=2006-09-30 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2006-12-31: period=2006-12-31 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2007-03-31: period=2007-03-31 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2022-06-30: period=2022-06-30 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2022-09-30: period=2022-09-30 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2025-03-31: period=2025-03-31 00:00:00, ann=NaT, days_diff=nan
+  WIPRO_2026-09-30: period=2026-09-30 00:00:00, ann=NaT, days_diff=nan
+
+EARLY ANNOUNCEMENTS (before period end):
+  AXISBANK_2006-12-31: BOARD_EVENT, period=2006-12-31 00:00:00, ann=2006-11-06 15:45:00, days_diff=-55.0
+  BHARTIARTL_2022-09-30: BOARD_EVENT, period=2022-09-30 00:00:00, ann=2022-08-08 16:31:57, days_diff=-53.0
+  COALINDIA_2022-09-30: BOARD_EVENT, period=2022-09-30 00:00:00, ann=2022-08-10 17:52:36, days_diff=-51.0
+  COALINDIA_2026-09-30: BOARD_EVENT, period=2026-09-30 00:00:00, ann=2026-07-27 17:25:36, days_diff=-65.0
+  HDFCBANK_2005-09-30: BOARD_EVENT, period=2005-09-30 00:00:00, ann=2005-07-14 00:00:00, days_diff=-78.0
+  HDFCBANK_2007-03-31: BOARD_EVENT, period=2007-03-31 00:00:00, ann=2007-01-11 14:26:00, days_diff=-79.0
+  SUNPHARMA_2026-09-30: BOARD_EVENT, period=2026-09-30 00:00:00, ann=2026-07-31 14:30:19, days_diff=-61.0
+
+ACTUAL RESULT events: 3292 (87.4%)
+
+Days from period end to announcement (median): 29
+Days from period end to announcement (mean): 32.0
+
+======================================================================
+TIMING CONSISTENCY CHECKS
+======================================================================
+
+VERY_LATE_ANNOUNCEMENT: 9 violations
+  {'event_key': 'APOLLOHOSP_2006-09-30', 'period_ended': Timestamp('2006-09-30 00:00:00'), 'result_announcement_datetime': Timestamp('2007-01-24 16:32:00'), 'days_period_to_ann': 116.0}
+  {'event_key': 'CIPLA_2007-03-31', 'period_ended': Timestamp('2007-03-31 00:00:00'), 'result_announcement_datetime': Timestamp('2007-07-20 16:22:00'), 'days_period_to_ann': 111.0}
+  {'event_key': 'CIPLA_2008-03-31', 'period_ended': Timestamp('2008-03-31 00:00:00'), 'result_announcement_datetime': Timestamp('2008-07-18 16:32:00'), 'days_period_to_ann': 109.0}
+  {'event_key': 'CIPLA_2009-03-31', 'period_ended': Timestamp('2009-03-31 00:00:00'), 'result_announcement_datetime': Timestamp('2009-07-15 16:10:00'), 'days_period_to_ann': 106.0}
+  {'event_key': 'HINDALCO_2009-03-31', 'period_ended': Timestamp('2009-03-31 00:00:00'), 'result_announcement_datetime': Timestamp('2009-06-30 14:44:00'), 'days_period_to_ann': 91.0}
+  ... and 4 more
+
+======================================================================
+SESSION TYPE CONSISTENCY (Derived from Time)
+======================================================================
+  Session type not available in canonical events
+
+MIDNIGHT_ANNOUNCEMENT_TIME: 8 inconsistencies
+  {'event_key': 'HCLTECH_2006-06-30', 'result_announcement_datetime': Timestamp('2006-07-18 00:00:00')}
+  {'event_key': 'HDFCBANK_2005-09-30', 'result_announcement_datetime': Timestamp('2005-07-14 00:00:00')}
+  {'event_key': 'INFY_2004-12-31', 'result_announcement_datetime': Timestamp('2005-01-12 00:00:00')}
+  {'event_key': 'RELIANCE_2005-03-31', 'result_announcement_datetime': Timestamp('2005-04-27 00:00:00')}
+  {'event_key': 'RELIANCE_2005-09-30', 'result_announcement_datetime': Timestamp('2005-11-16 00:00:00')}
+  ... and 3 more
+
+======================================================================
+FEATURE CUTOFF ANALYSIS (from ML-ready dataset)
+======================================================================
+Days from feature_cutoff to announcement (median): 1
+Days from feature_cutoff to announcement (mean): 0.9
+  Same day (0): 833 events
+  1 day before: 509 events
+  >1 day before: 550 events
+  After announcement (VIOLATION): 0 events

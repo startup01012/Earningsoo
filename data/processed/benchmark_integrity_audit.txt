@@ -1,0 +1,126 @@
+# Benchmark Integrity Audit — EarningsOS
+
+## Objective
+
+Verify that the benchmark (NIFTYBEES) is correctly labeled as an ETF proxy
+and NOT misrepresented as the official NIFTY 50 index.
+
+---
+
+## Current State
+
+| Attribute | Value | Status |
+|-----------|-------|--------|
+| **Benchmark Name** | NIFTYBEES | ✅ Documented |
+| **Source** | NSE Bhavcopy (same as equity prices) | ✅ Documented |
+| **Type** | ETF tracking NIFTY 50 | ✅ Documented |
+| **Official NIFTY 50 Price Index** | NOT available in Bhavcopy | ⚠️ Unavailable |
+| **NIFTY 50 Total Return Index (TRI)** | NOT available in Bhavcopy | ⚠️ Unavailable |
+
+---
+
+## Benchmark Features in Dataset
+
+| Feature | Description | Type |
+|---------|-------------|------|
+| `benchmark_return_1d_after` | Benchmark return 1 day after announcement | Target |
+| `benchmark_return_3d_after` | Benchmark return 3 days after announcement | Target |
+| `benchmark_return_5d_after` | Benchmark return 5 days after announcement | Target |
+| `relative_return_1d` | Stock return - benchmark return (1d) | Feature |
+| `relative_return_3d` | Stock return - benchmark return (3d) | Feature |
+| `relative_return_5d` | Stock return - benchmark return (5d) | Feature |
+| `relative_return_10d` | Stock return - benchmark return (10d) | Feature |
+| `relative_return_20d` | Stock return - benchmark return (20d) | Feature |
+| `relative_return_60d` | Stock return - benchmark return (60d) | Feature |
+
+---
+
+## NIFTYBEES vs Official NIFTY 50
+
+| Aspect | NIFTYBEES (ETF) | Official NIFTY 50 |
+|--------|-----------------|-------------------|
+| **Tracking Error** | ~0.1-0.3% annually | N/A (is the index) |
+| **Dividends** | Reinvested in NAV | Not in price index; in TRI |
+| **Liquidity** | High (ETF units) | N/A |
+| **Expense Ratio** | ~0.05% | N/A |
+| **Corporate Actions** | Unit splits only | Index rebalancing only |
+
+---
+
+## Impact on Features
+
+### Relative Returns (`relative_return_*`)
+- Computed as: `stock_return - niftybees_return`
+- ETF tracking error introduces small noise (~basis points)
+- Dividend reinvestment in ETF NAV vs price index creates drift
+- **Acceptable for research** - noise is small relative to stock returns
+
+### Abnormal Returns (`abnormal_return_*`)
+- Computed as: `stock_return - benchmark_return`
+- Same considerations as relative returns
+- **Acceptable for research**
+
+### Targets (`benchmark_return_*_after`, `return_*_after`)
+- Benchmark returns use NIFTYBEES raw prices
+- Subject to same corporate action issues as stock prices
+- **Documented limitation** (see price_integrity_audit.txt)
+
+---
+
+## Correct Terminology (MANDATORY)
+
+| ❌ INCORRECT | ✅ CORRECT |
+|-------------|-----------|
+| "NIFTY 50 index" | "NIFTYBEES ETF proxy" |
+| "NIFTY 50 benchmark" | "NIFTYBEES ETF benchmark" |
+| "Index return" | "ETF proxy return" |
+| "NIFTY 50 TRI" | "Not available - using ETF proxy" |
+
+---
+
+## Status
+
+| Check | Status |
+|-------|--------|
+| Benchmark correctly named in code/docs | ✅ PASS |
+| Not called "NIFTY 50 index" anywhere | ✅ PASS |
+| ETF proxy nature documented | ✅ PASS |
+| Official index unavailability documented | ✅ PASS |
+| Tracking error acknowledged | ✅ PASS |
+| Corporate action impact on benchmark documented | ✅ PASS (see price_integrity_audit.txt) |
+
+---
+
+## Limitations
+
+1. **Tracking Error**: NIFTYBEES has ~0.1-0.3% annual tracking error vs NIFTY 50
+2. **Dividend Handling**: ETF reinvests dividends; price index doesn't; TRI does
+3. **No TRI Available**: Cannot compute true total return benchmark
+4. **Corporate Actions**: ETF may have unit splits; affects raw price returns
+
+---
+
+## Recommendation for Production
+
+If/when official NIFTY 50 Price Index and TRI become available:
+1. Add as separate benchmark columns (`nifty50_price_return_*`, `nifty50_tri_return_*`)
+2. Keep NIFTYBEES as `niftybees_return_*` for backward compatibility
+3. Recompute relative/abnormal returns with official benchmark
+4. Compare model performance with both benchmarks
+
+---
+
+## Conclusion
+
+**BENCHMARK STATUS: ✅ PASS / KNOWN LIMITATION**
+
+NIFTYBEES is correctly identified and documented as an ETF proxy.
+It is NOT mislabeled as the official NIFTY 50 index.
+The limitations (tracking error, no TRI, corporate actions) are documented.
+
+**DO NOT** fabricate official index data.
+**DO NOT** rename NIFTYBEES to "NIFTY 50" in any output.
+
+---
+*Generated: 2025-09-08*
+*Dataset: earnings_ml_ready.parquet*

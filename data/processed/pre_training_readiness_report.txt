@@ -1,0 +1,32 @@
+======================================================================
+PRE-TRAINING READINESS AUDIT
+======================================================================
+  WARNING: Target abnormal_return_5d has 2 missing values
+  WARNING: Target return_5d_after has 2 missing values
+  WARNING: Target benchmark_return_5d_after has 2 missing values
+  ✅ Dataset exists: PASS
+  ✅ Event uniqueness: PASS
+  ✅ Expected columns: PASS
+  ✅ Feature/target counts: PASS
+  ✅ Target existence: PASS
+  ✅ No all-NaN features: PASS
+  ✅ No constant features: PASS
+  ✅ No infinite features: PASS
+  ✅ No target leakage: PASS
+  ✅ No post-event leakage: PASS
+  ✅ No future columns: PASS
+  ✅ PIT market cutoff: PASS
+  ✅ PIT fundamental status: PASS
+  ✅ PIT fundamental dates: PASS
+  ✅ Prior earnings ordering: PASS
+  ✅ Chronological split: PASS
+  ✅ Target distribution: PASS
+  ✅ Missing targets: PASS
+  ✅ Guardrail module: PASS
+  ✅ val_dividend_yield absent: PASS
+======================================================================
+SUMMARY: 20 passed, 0 failed, 0 errors
+
+PRE-TRAINING READINESS: PASS
+
+✅ All checks passed. Ready for model training.

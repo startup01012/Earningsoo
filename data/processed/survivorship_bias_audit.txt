@@ -1,0 +1,122 @@
+======================================================================
+SURVIVORSHIP BIAS AUDIT
+======================================================================
+
+OBJECTIVE
+---------
+Determine if the EarningsOS dataset suffers from survivorship bias by
+using CURRENT NIFTY 50 constituents backfilled historically, rather than
+historical index membership.
+
+======================================================================
+CURRENT STATE
+======================================================================
+Total events in canonical dataset: 3765
+Total events in ML dataset: 1892
+Unique symbols in canonical: 50
+Unique symbols in ML: 50
+
+CONCERN: No constituent tracking columns found in events data
+
+Unique symbols: 50
+
+WARNING: No current NIFTY 50 constituents file found
+
+======================================================================
+SYMBOL LIFECYCLE ANALYSIS
+======================================================================
+
+Symbols with first event AFTER 2020-01-01 (potential index additions):
+  ETERNAL: first=2021-06-30, events=22
+  JIOFIN: first=2023-09-30, events=13
+  MAXHEALTH: first=2020-06-30, events=25
+  NESTLEIND: first=2023-09-30, events=13
+
+Symbols present from early periods (pre-2020):
+  ADANIENT: first=2006-06-30, last=2026-09-30, events=80
+  ADANIPORTS: first=2008-03-31, last=2026-06-30, events=74
+  APOLLOHOSP: first=2005-06-30, last=2026-06-30, events=83
+  ASIANPAINT: first=2004-03-31, last=2026-06-30, events=86
+  AXISBANK: first=2004-12-31, last=2026-06-30, events=83
+  BAJAJ-AUTO: first=2008-06-30, last=2026-09-30, events=74
+  BAJAJFINSV: first=2008-09-30, last=2026-06-30, events=71
+  BAJFINANCE: first=2005-03-31, last=2026-06-30, events=83
+  BEL: first=2005-06-30, last=2026-06-30, events=81
+  BHARTIARTL: first=2005-03-31, last=2026-09-30, events=87
+  CIPLA: first=2004-12-31, last=2026-09-30, events=82
+  COALINDIA: first=2010-12-31, last=2026-09-30, events=64
+  DRREDDY: first=2004-12-31, last=2026-09-30, events=88
+  EICHERMOT: first=2004-09-30, last=2026-09-30, events=84
+  GRASIM: first=2004-12-31, last=2026-06-30, events=86
+  HCLTECH: first=2004-09-30, last=2026-06-30, events=87
+  HDFCBANK: first=2004-12-31, last=2026-06-30, events=83
+  HDFCLIFE: first=2017-12-31, last=2026-06-30, events=35
+  HINDALCO: first=2004-12-31, last=2026-09-30, events=87
+  HINDUNILVR: first=2004-12-31, last=2026-09-30, events=86
+  ICICIBANK: first=2004-12-31, last=2026-09-30, events=88
+  INDIGO: first=2015-12-31, last=2026-06-30, events=43
+  INFY: first=2004-09-30, last=2026-06-30, events=88
+  ITC: first=2004-12-31, last=2026-06-30, events=83
+  JSWSTEEL: first=2005-06-30, last=2026-09-30, events=85
+  KOTAKBANK: first=2004-12-31, last=2026-09-30, events=87
+  LT: first=2004-12-31, last=2026-09-30, events=88
+  M&M: first=2004-12-31, last=2026-09-30, events=88
+  MARUTI: first=2004-09-30, last=2026-09-30, events=89
+  NTPC: first=2004-09-30, last=2026-06-30, events=85
+  ONGC: first=2004-12-31, last=2026-09-30, events=88
+  POWERGRID: first=2007-12-31, last=2026-09-30, events=76
+  RELIANCE: first=2004-12-31, last=2026-09-30, events=88
+  SBILIFE: first=2017-09-30, last=2026-06-30, events=36
+  SBIN: first=2004-06-30, last=2026-09-30, events=86
+  SHRIRAMFIN: first=2005-03-31, last=2026-06-30, events=77
+  SUNPHARMA: first=2004-12-31, last=2026-09-30, events=83
+  TATACONSUM: first=2004-12-31, last=2026-06-30, events=83
+  TATASTEEL: first=2005-03-31, last=2026-09-30, events=80
+  TCS: first=2004-12-31, last=2026-09-30, events=88
+  TECHM: first=2006-12-31, last=2026-06-30, events=79
+  TITAN: first=2006-12-31, last=2026-06-30, events=79
+  TMPV: first=2004-09-30, last=2026-06-30, events=89
+  TRENT: first=2005-01-31, last=2026-09-30, events=83
+  ULTRACEMCO: first=2006-03-31, last=2026-06-30, events=80
+  WIPRO: first=2004-09-30, last=2026-09-30, events=89
+
+======================================================================
+SURVIVORSHIP BIAS ASSESSMENT
+======================================================================
+
+FINDING: The dataset appears to use a FIXED UNIVERSE of symbols (current or
+near-current NIFTY 50 constituents) backfilled historically. This creates
+SURVIVORSHIP_BIAS_RISK because:
+
+1. Companies that were REMOVED from NIFTY 50 (due to poor performance,
+   delisting, mergers) are likely ABSENT from the dataset for periods
+   when they WERE in the index.
+
+2. Companies that were ADDED to NIFTY 50 recently appear in the dataset
+   for historical periods when they were NOT in the index.
+
+3. The survivor bias INFLATES performance metrics because:
+   - Failed/delisted companies are excluded
+   - Only "successful" companies that survived to be in current index remain
+
+EVIDENCE:
+- 4 symbols only appear in recent periods (likely index additions)
+
+- No historical constituent tracking columns found in events data
+- Universe construction method not documented in pipeline
+
+======================================================================
+RECOMMENDED FIX (Future)
+======================================================================
+1. Obtain HISTORICAL NIFTY 50 constituent data (quarterly rebalancing)
+2. Filter events to only include symbols that were ACTUALLY in the index
+   at the time of each earnings event
+3. Re-run pipeline with point-in-time universe
+4. Compare results with/without survivorship bias correction
+
+======================================================================
+RISK LEVEL: HIGH
+======================================================================
+This is a FUNDAMENTAL DATA ISSUE that affects ALL model results.
+Models trained on this data may learn patterns that don't generalize
+to real-time trading where the universe includes future index deletions.

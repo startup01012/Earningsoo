@@ -79,6 +79,9 @@ def load_all_prices() -> pd.DataFrame:
     for f in files:
         df = pd.read_parquet(f)
         df["date"] = pd.to_datetime(df["date"], errors="coerce")
+        # Normalize timezone: convert tz-aware to tz-naive (UTC -> local -> naive)
+        if df["date"].dt.tz is not None:
+            df["date"] = df["date"].dt.tz_convert(None)
         all_dfs.append(df)
     prices = pd.concat(all_dfs, ignore_index=True)
     prices = prices.dropna(subset=["date", "symbol", "close"])
@@ -430,6 +433,7 @@ def main():
     bench_prices = prices[prices["symbol"] == BENCHMARK_SYMBOL].copy()
     bench_prices = bench_prices.sort_values("date").reset_index(drop=True)
     print(f"  Benchmark ({BENCHMARK_SYMBOL}) rows: {len(bench_prices)}")
+    print(f"  Benchmark date range: {bench_prices['date'].min()} to {bench_prices['date'].max()}")
 
     # ------------------------------------------------------------------
     # Build trading day infrastructure
@@ -442,17 +446,24 @@ def main():
     # Create price lookup: symbol -> Series indexed by trading day position
     print("\n[4/6] Building price lookup tables...")
     price_lookup = {}
+    volume_lookup = {}
     for sym in nifty50:
         sym_prices = prices_nifty[prices_nifty["symbol"] == sym].sort_values("date")
         if len(sym_prices) > 0:
-            # Align to trading day index
-            aligned = pd.Series(index=range(len(trading_days)), dtype=float)
+            # Align close prices
+            aligned_close = pd.Series(index=range(len(trading_days)), dtype=float)
+            # Align volumes
+            aligned_vol = pd.Series(index=range(len(trading_days)), dtype=float)
             for _, row in sym_prices.iterrows():
                 d = row["date"].date()
                 if d in date_to_idx:
-                    aligned.iloc[date_to_idx[d]] = row["close"]
-            price_lookup[sym] = aligned
-    print(f"  Built lookup for {len(price_lookup)} symbols")
+                    idx = date_to_idx[d]
+                    aligned_close.iloc[idx] = row["close"]
+                    aligned_vol.iloc[idx] = row["volume"]
+            price_lookup[sym] = aligned_close
+            volume_lookup[sym] = aligned_vol
+    print(f"  Built price lookup for {len(price_lookup)} symbols")
+    print(f"  Built volume lookup for {len(volume_lookup)} symbols")
 
     # Benchmark aligned series
     bench_aligned = pd.Series(index=range(len(trading_days)), dtype=float)
@@ -513,6 +524,8 @@ def main():
         bench_hist = bench_aligned.iloc[:cutoff_idx + 1].dropna()
         if len(bench_hist) < 2:
             skipped["no_benchmark"] += 1
+            if skipped["no_benchmark"] <= 5:
+                print(f"  DEBUG no_benchmark: {event_key}, cutoff_idx={cutoff_idx}, bench_hist_len={len(bench_hist)}")
             continue
 
         # Calculate returns for feature windows
@@ -529,15 +542,9 @@ def main():
         features.update(calculate_volatility(hist_returns, VOLATILITY_WINDOWS))
 
         # Volume features (need volume data)
-        if symbol in price_lookup:
-            # Get volume data aligned
-            sym_vol_data = prices_nifty[prices_nifty["symbol"] == symbol].sort_values("date")
-            vol_aligned = pd.Series(index=range(len(trading_days)), dtype=float)
-            for _, row in sym_vol_data.iterrows():
-                d = row["date"].date()
-                if d in date_to_idx:
-                    vol_aligned.iloc[date_to_idx[d]] = row["volume"]
-            hist_vol = vol_aligned.iloc[:cutoff_idx + 1].dropna()
+        if symbol in volume_lookup:
+            vol_series = volume_lookup[symbol]
+            hist_vol = vol_series.iloc[:cutoff_idx + 1].dropna()
             features.update(calculate_volume_features(hist_vol, VOLUME_WINDOWS))
         else:
             for w in VOLUME_WINDOWS:

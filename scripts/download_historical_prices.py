@@ -12,7 +12,7 @@ import requests
 # CONFIG
 # ============================================================
 
-START_DATE = date(2024, 7, 8)
+START_DATE = date(2016, 1, 1)
 END_DATE = date(2026, 8, 20)
 
 BASE_URL = "https://nsearchives.nseindia.com/content/cm"

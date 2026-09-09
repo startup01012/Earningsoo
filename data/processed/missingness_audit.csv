@@ -1,0 +1,151 @@
+feature_name,feature_group,overall_missing_pct,train_missing_pct,validation_missing_pct,test_missing_pct,max_missingness_diff_pct,missingness_time_correlation,missingness_type,missingness_reason,informative_missing,missing_indicates_zero
+fund_a_cash,fundamental_balance,76.27,100.0,44.38,36.29,63.71,-0.6131,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_current_assets,fundamental_balance,81.08,100.0,55.62,49.24,50.76,-0.5296,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_current_liabilities,fundamental_balance,81.08,100.0,55.62,49.24,50.76,-0.5296,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_equity,fundamental_balance,76.32,100.0,44.38,36.55,63.45,-0.6114,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_free_cash_flow,fundamental_balance,76.32,100.0,44.38,36.55,63.45,-0.6114,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_long_term_debt,fundamental_balance,81.08,100.0,54.49,50.25,49.75,-0.523,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_operating_cash_flow,fundamental_balance,77.27,100.0,46.63,39.09,60.91,-0.5952,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_shares_outstanding,fundamental_balance,76.32,100.0,44.38,36.55,63.45,-0.6114,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_total_assets,fundamental_balance,76.32,100.0,44.38,36.55,63.45,-0.6114,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_total_debt,fundamental_balance,76.8,100.0,45.51,37.82,62.18,-0.6033,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_asset_turnover,fundamental_balance,94.08,100.0,100.0,71.57,28.43,-0.3897,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_cash,fundamental_balance,93.34,100.0,100.0,68.02,31.98,-0.412,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_cash_and_sti,fundamental_balance,94.66,100.0,100.0,74.37,25.63,-0.366,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_cash_to_debt,fundamental_balance,93.66,100.0,100.0,69.54,30.46,-0.401,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_change_in_working_capital,fundamental_balance,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_current_assets,fundamental_balance,95.4,100.0,100.0,77.92,22.08,-0.338,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_current_debt,fundamental_balance,95.61,100.0,100.0,78.93,21.07,-0.33,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_current_liabilities,fundamental_balance,95.4,100.0,100.0,77.92,22.08,-0.338,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_debt_to_equity,fundamental_balance,93.66,100.0,100.0,69.54,30.46,-0.401,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_equity,fundamental_balance,93.39,100.0,100.0,68.27,31.73,-0.4099,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_fcf_to_debt,fundamental_balance,99.0,100.0,100.0,95.18,4.82,-0.1577,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_financing_cash_flow,fundamental_balance,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_free_cash_flow,fundamental_balance,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_investing_cash_flow,fundamental_balance,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_long_term_debt,fundamental_balance,95.4,100.0,100.0,77.92,22.08,-0.337,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_net_debt,fundamental_balance,94.98,100.0,100.0,75.89,24.11,-0.3536,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_operating_cash_flow,fundamental_balance,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_retained_earnings,fundamental_balance,94.56,100.0,100.0,73.86,26.14,-0.3703,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_shares_basic,fundamental_balance,89.53,100.0,100.0,49.75,50.25,-0.5295,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_shares_diluted,fundamental_balance,89.53,100.0,100.0,49.75,50.25,-0.5295,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_shares_outstanding,fundamental_balance,93.13,100.0,100.0,67.01,32.99,-0.4186,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_total_assets,fundamental_balance,93.39,100.0,100.0,68.27,31.73,-0.4099,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_total_debt,fundamental_balance,93.66,100.0,100.0,69.54,30.46,-0.401,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_total_equity,fundamental_balance,93.39,100.0,100.0,68.27,31.73,-0.4099,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_total_liabilities,fundamental_balance,93.39,100.0,100.0,68.27,31.73,-0.4099,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_working_capital,fundamental_balance,95.4,100.0,100.0,77.92,22.08,-0.338,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_capex,fundamental_cashflow,76.48,100.0,45.22,36.55,63.45,-0.6095,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_capex,fundamental_cashflow,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_depreciation_amortization,fundamental_cashflow,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_current_ratio,fundamental_derived,95.4,100.0,100.0,77.92,22.08,-0.338,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_roa,fundamental_derived,94.08,100.0,100.0,71.57,28.43,-0.3897,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_roce,fundamental_derived,95.82,100.0,100.0,79.95,20.05,-0.3247,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_roe,fundamental_derived,94.08,100.0,100.0,71.57,28.43,-0.3897,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_eps_diluted,fundamental_income,76.32,100.0,44.38,36.55,63.45,-0.6114,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_gross_profit,fundamental_income,81.03,100.0,55.62,48.98,51.02,-0.5314,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_net_income,fundamental_income,76.32,100.0,44.38,36.55,63.45,-0.6114,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_operating_income,fundamental_income,81.03,100.0,55.62,48.98,51.02,-0.5314,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_a_revenue,fundamental_income,76.32,100.0,44.38,36.55,63.45,-0.6114,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_cf_net_income,fundamental_income,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_cost_of_revenue,fundamental_income,91.91,100.0,100.0,61.17,38.83,-0.4593,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_ebit,fundamental_income,91.38,100.0,100.0,58.63,41.37,-0.4756,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_ebitda,fundamental_income,91.6,100.0,100.0,59.64,40.36,-0.469,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_ebitda_margin,fundamental_income,91.6,100.0,100.0,59.64,40.36,-0.469,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_eps_basic,fundamental_income,89.53,100.0,100.0,49.75,50.25,-0.5295,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_eps_diluted,fundamental_income,89.48,100.0,100.0,49.49,50.51,-0.5307,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_eps_growth_qoq,fundamental_income,92.49,100.0,100.0,63.96,36.04,-0.4527,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_eps_growth_yoy,fundamental_income,99.47,100.0,100.0,97.46,2.54,-0.124,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_fcf_margin,fundamental_income,99.0,100.0,100.0,95.18,4.82,-0.1577,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_gross_profit,fundamental_income,91.81,100.0,100.0,60.66,39.34,-0.4629,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_interest_expense,fundamental_income,89.9,100.0,100.0,51.52,48.48,-0.5186,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_interest_income,fundamental_income,97.36,100.0,100.0,87.31,12.69,-0.2549,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_net_income,fundamental_income,89.38,100.0,100.0,48.98,51.02,-0.5336,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_net_income_common,fundamental_income,89.53,100.0,100.0,49.75,50.25,-0.5292,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_net_income_growth_qoq,fundamental_income,92.07,100.0,100.0,61.93,38.07,-0.4655,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_net_income_growth_yoy,fundamental_income,99.58,100.0,100.0,97.97,2.03,-0.1108,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_net_margin,fundamental_income,89.38,100.0,100.0,48.98,51.02,-0.5336,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_normalized_ebitda,fundamental_income,91.6,100.0,100.0,59.64,40.36,-0.469,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_normalized_income,fundamental_income,89.38,100.0,100.0,48.98,51.02,-0.5336,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_operating_expense,fundamental_income,90.43,100.0,100.0,54.06,45.94,-0.5035,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_operating_income,fundamental_income,91.6,100.0,100.0,59.64,40.36,-0.4693,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_operating_margin,fundamental_income,91.65,100.0,100.0,59.9,40.1,-0.4677,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_operating_revenue,fundamental_income,89.75,100.0,100.0,50.76,49.24,-0.5235,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_pretax_income,fundamental_income,89.38,100.0,100.0,48.98,51.02,-0.5336,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_revenue,fundamental_income,89.38,100.0,100.0,48.98,51.02,-0.5336,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_revenue_growth_qoq,fundamental_income,92.07,100.0,100.0,61.93,38.07,-0.4655,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_revenue_growth_yoy,fundamental_income,99.58,100.0,100.0,97.97,2.03,-0.1108,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_sga,fundamental_income,97.41,100.0,100.0,87.56,12.44,-0.2525,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+fund_tax_provision,fundamental_income,89.38,100.0,100.0,48.98,51.02,-0.5336,EXPECTED_UNAVAILABLE,Fundamental data only available ~2022+ from yfinance; pre-2022 events have no fundamentals,True,False
+drawdown_from_20d_high,market_drawdown,1.11,1.84,0.0,0.0,1.84,-0.1684,UNEXPECTED,Market features should have near-complete coverage,False,False
+drawdown_from_252d_high,market_drawdown,10.36,16.73,1.12,0.25,16.47,-0.4796,UNEXPECTED,Market features should have near-complete coverage,False,False
+drawdown_from_60d_high,market_drawdown,2.59,4.2,0.28,0.0,4.2,-0.2497,UNEXPECTED,Market features should have near-complete coverage,False,False
+distance_from_200dma,market_ma_distance,8.09,13.13,0.84,0.0,13.13,-0.4302,UNEXPECTED,Market features should have near-complete coverage,False,False
+distance_from_20dma,market_ma_distance,1.11,1.84,0.0,0.0,1.84,-0.1684,UNEXPECTED,Market features should have near-complete coverage,False,False
+distance_from_50dma,market_ma_distance,2.54,4.12,0.28,0.0,4.12,-0.2517,UNEXPECTED,Market features should have near-complete coverage,False,False
+relative_return_10d,market_relative,0.16,0.26,0.0,0.0,0.26,-0.0667,UNEXPECTED,Market features should have near-complete coverage,False,False
+relative_return_1d,market_relative,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+relative_return_20d,market_relative,1.37,2.28,0.0,0.0,2.28,-0.187,UNEXPECTED,Market features should have near-complete coverage,False,False
+relative_return_3d,market_relative,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+relative_return_5d,market_relative,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+relative_return_60d,market_relative,2.59,4.2,0.28,0.0,4.2,-0.2497,UNEXPECTED,Market features should have near-complete coverage,False,False
+return_10d,market_returns,0.16,0.26,0.0,0.0,0.26,-0.0667,UNEXPECTED,Market features should have near-complete coverage,False,False
+return_1d,market_returns,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+return_20d,market_returns,1.37,2.28,0.0,0.0,2.28,-0.187,UNEXPECTED,Market features should have near-complete coverage,False,False
+return_3d,market_returns,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+return_5d,market_returns,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+return_60d,market_returns,2.59,4.2,0.28,0.0,4.2,-0.2497,UNEXPECTED,Market features should have near-complete coverage,False,False
+volatility_20d,market_volatility,1.37,2.28,0.0,0.0,2.28,-0.187,UNEXPECTED,Market features should have near-complete coverage,False,False
+volatility_5d,market_volatility,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+volatility_60d,market_volatility,2.59,4.2,0.28,0.0,4.2,-0.2497,UNEXPECTED,Market features should have near-complete coverage,False,False
+volume_ratio_20d,market_volume,1.11,1.84,0.0,0.0,1.84,-0.1684,UNEXPECTED,Market features should have near-complete coverage,False,False
+volume_ratio_5d,market_volume,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+volume_zscore_20d,market_volume,1.11,1.84,0.0,0.0,1.84,-0.1684,UNEXPECTED,Market features should have near-complete coverage,False,False
+volume_zscore_5d,market_volume,0.0,0.0,0.0,0.0,0.0,,UNEXPECTED,Market features should have near-complete coverage,False,False
+prior_abn_ret_1d_mean_2,prior_earnings,5.07,4.55,11.8,0.51,11.29,-0.1222,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_1d_mean_4,prior_earnings,3.75,5.34,1.97,0.76,4.58,-0.2114,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_1d_mean_8,prior_earnings,4.97,6.65,2.81,2.03,4.62,-0.19,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_1d_median_4,prior_earnings,3.75,5.34,1.97,0.76,4.58,-0.2114,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_1d_median_8,prior_earnings,4.97,6.65,2.81,2.03,4.62,-0.19,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_1d_std_4,prior_earnings,6.08,9.11,2.25,0.76,8.35,-0.3185,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_1d_std_8,prior_earnings,7.24,10.42,2.81,2.03,8.39,-0.2991,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_3d_mean_2,prior_earnings,5.07,4.55,11.8,0.51,11.29,-0.1222,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_3d_mean_4,prior_earnings,3.75,5.34,1.97,0.76,4.58,-0.2114,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_3d_mean_8,prior_earnings,4.97,6.65,2.81,2.03,4.62,-0.19,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_3d_median_4,prior_earnings,3.75,5.34,1.97,0.76,4.58,-0.2114,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_3d_median_8,prior_earnings,4.97,6.65,2.81,2.03,4.62,-0.19,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_3d_std_4,prior_earnings,6.08,9.11,2.25,0.76,8.35,-0.3185,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_3d_std_8,prior_earnings,7.24,10.42,2.81,2.03,8.39,-0.2991,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_5d_mean_2,prior_earnings,5.07,4.55,11.8,0.51,11.29,-0.1222,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_5d_mean_4,prior_earnings,3.75,5.34,1.97,0.76,4.58,-0.2114,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_5d_mean_8,prior_earnings,4.97,6.65,2.81,2.03,4.62,-0.19,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_5d_median_4,prior_earnings,3.75,5.34,1.97,0.76,4.58,-0.2114,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_5d_median_8,prior_earnings,4.97,6.65,2.81,2.03,4.62,-0.19,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_5d_std_4,prior_earnings,6.08,9.11,2.25,0.76,8.35,-0.3185,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_abn_ret_5d_std_8,prior_earnings,7.24,10.42,2.81,2.03,8.39,-0.2991,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_avg_reaction_magnitude_2,prior_earnings,5.07,4.55,11.8,0.51,11.29,-0.1222,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_avg_reaction_magnitude_4,prior_earnings,3.75,5.34,1.97,0.76,4.58,-0.2114,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_avg_reaction_magnitude_8,prior_earnings,4.97,6.65,2.81,2.03,4.62,-0.19,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_days_since_last,prior_earnings,0.32,0.35,0.56,0.0,0.56,-0.0196,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_earnings_count,prior_earnings,0.0,0.0,0.0,0.0,0.0,,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_last_abn_ret_1d,prior_earnings,6.66,4.29,13.2,7.61,8.91,-0.0139,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_last_abn_ret_3d,prior_earnings,6.66,4.29,13.2,7.61,8.91,-0.0139,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_last_abn_ret_5d,prior_earnings,6.66,4.29,13.2,7.61,8.91,-0.0139,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_last_reaction_class,prior_earnings,6.66,4.29,13.2,7.61,8.91,-0.0139,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_negative_rate_4,prior_earnings,1.43,1.58,1.97,0.51,1.46,-0.0252,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_negative_rate_8,prior_earnings,2.7,2.89,2.81,2.03,0.86,-0.02,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_neutral_rate_4,prior_earnings,1.43,1.58,1.97,0.51,1.46,-0.0252,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_neutral_rate_8,prior_earnings,2.7,2.89,2.81,2.03,0.86,-0.02,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_positive_rate_4,prior_earnings,1.43,1.58,1.97,0.51,1.46,-0.0252,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_positive_rate_8,prior_earnings,2.7,2.89,2.81,2.03,0.86,-0.02,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_reaction_streak,prior_earnings,0.32,0.35,0.56,0.0,0.56,-0.0196,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_reaction_trend_4,prior_earnings,6.08,9.11,2.25,0.76,8.35,-0.3185,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+prior_reaction_trend_8,prior_earnings,7.24,10.42,2.81,2.03,8.39,-0.2991,EXPECTED_STRUCTURAL,Prior earnings features require historical events; early events have fewer priors,True,False
+val_earnings_yield,valuation,69.71,100.0,44.38,4.82,95.18,-0.787,EXPECTED_UNAVAILABLE,Valuation features require both price and fundamentals; missing when fundamentals unavailable,True,False
+val_ev,valuation,74.84,100.0,45.51,28.43,71.57,-0.6563,EXPECTED_UNAVAILABLE,Valuation features require both price and fundamentals; missing when fundamentals unavailable,True,False
+val_ev_ebitda,valuation,95.82,100.0,100.0,79.95,20.05,-0.3247,EXPECTED_UNAVAILABLE,Valuation features require both price and fundamentals; missing when fundamentals unavailable,True,False
+val_market_cap,valuation,69.24,100.0,44.38,2.54,97.46,-0.7996,EXPECTED_UNAVAILABLE,Valuation features require both price and fundamentals; missing when fundamentals unavailable,True,False
+val_pb,valuation,74.21,100.0,44.38,26.4,73.6,-0.6685,EXPECTED_UNAVAILABLE,Valuation features require both price and fundamentals; missing when fundamentals unavailable,True,False
+val_pcf,valuation,98.94,100.0,100.0,94.92,5.08,-0.1609,EXPECTED_UNAVAILABLE,Valuation features require both price and fundamentals; missing when fundamentals unavailable,True,False
+val_pe,valuation,69.71,100.0,44.38,4.82,95.18,-0.787,EXPECTED_UNAVAILABLE,Valuation features require both price and fundamentals; missing when fundamentals unavailable,True,False
+val_ps,valuation,89.38,100.0,100.0,48.98,51.02,-0.5336,EXPECTED_UNAVAILABLE,Valuation features require both price and fundamentals; missing when fundamentals unavailable,True,False

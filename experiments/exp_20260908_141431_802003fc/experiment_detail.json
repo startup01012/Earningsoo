@@ -1,0 +1,80 @@
+{
+  "experiment_id": "exp_20260908_141431_802003fc",
+  "experiment_name": "LightGBM_Variant_B",
+  "timestamp": "2026-09-08T14:14:31.708276",
+  "git_commit": "c3848125edcd9dc8a40cb01e05eeff9293f0889d",
+  "git_status": "dirty",
+  "dataset_path": "data/processed/earnings_ml_ready.parquet",
+  "dataset_hash": "b98a4bbe98af4ad54ebb9423c39a61961872ecab3769469921362c97a52f62fb",
+  "dataset_shape": {
+    "rows": 1892,
+    "columns": 176
+  },
+  "feature_manifest_path": "data/processed/earnings_feature_manifest.csv",
+  "feature_manifest_hash": "3cec5184fcabfb505860abe219ee7f42c6b75747e3d816a239c2e8aa50f4d42a",
+  "feature_list": [
+    "return_1d",
+    "return_5d",
+    "volatility_20d",
+    "prior_earnings_count"
+  ],
+  "feature_group": "B",
+  "target": "reaction_class",
+  "train_start": "2016-01-12",
+  "train_end": "2021-12-31",
+  "val_start": "2022-01-01",
+  "val_end": "2024-03-31",
+  "test_start": "2024-04-01",
+  "test_end": "2026-06-30",
+  "embargo_days": 5,
+  "preprocessing_version": "v1.0",
+  "model_name": "LightGBM",
+  "hyperparameters": {
+    "objective": "multiclass",
+    "num_class": 3,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "random_state": 42
+  },
+  "random_seed": 42,
+  "software_versions": {
+    "python": "3.12.1",
+    "pandas": "3.0.5",
+    "numpy": "2.5.2",
+    "scikit-learn": "1.9.0",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "not_installed"
+  },
+  "description": "LightGBM with Market + Prior Earnings features (Variant B)",
+  "metrics": {
+    "macro_f1": 0.27,
+    "balanced_accuracy": 0.41,
+    "accuracy": 0.62,
+    "log_loss": 0.85,
+    "per_class_f1": {
+      "NEGATIVE": 0.25,
+      "NEUTRAL": 0.35,
+      "POSITIVE": 0.21
+    }
+  },
+  "status": "completed",
+  "fold_metrics": {
+    "fold_1": {
+      "macro_f1": 0.28,
+      "balanced_acc": 0.42
+    },
+    "fold_2": {
+      "macro_f1": 0.26,
+      "balanced_acc": 0.4
+    },
+    "fold_3": {
+      "macro_f1": 0.27,
+      "balanced_acc": 0.41
+    }
+  }
+}

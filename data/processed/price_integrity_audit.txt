@@ -1,0 +1,241 @@
+======================================================================
+PRICE / CORPORATE ACTION IMPACT AUDIT
+======================================================================
+
+OBJECTIVE
+---------
+Assess the impact of using RAW UNADJUSTED Bhavcopy prices on features
+and targets. Corporate actions (splits, bonuses, dividends, mergers)
+create artificial price discontinuities that distort returns,
+moving averages, volatility, and valuation metrics.
+
+======================================================================
+DATA SOURCE
+======================================================================
+- Source: NSE Bhavcopy (raw daily OHLCV)
+- Adjustment: NONE - Raw prices used directly
+- Corporate actions NOT adjusted: splits, bonuses, rights issues,
+  mergers/demergers, dividends
+
+======================================================================
+FEATURE SENSITIVITY ASSESSMENT
+======================================================================
+  distance_from_200dma: HIGH
+  distance_from_20dma: HIGH - Moving averages shift on split
+  distance_from_50dma: HIGH
+  drawdown_from_20d_high: HIGH - High/low prices affected
+  drawdown_from_252d_high: HIGH
+  drawdown_from_60d_high: HIGH
+  relative_return_10d: HIGH
+  relative_return_1d: HIGH - Relative return vs benchmark affected
+  relative_return_20d: HIGH
+  relative_return_3d: HIGH
+  relative_return_5d: HIGH
+  relative_return_60d: HIGH
+  return_10d: HIGH
+  return_1d: HIGH - Single day return directly affected by splits/bonuses
+  return_20d: HIGH
+  return_3d: HIGH - Multi-day return compounds split effects
+  return_5d: HIGH - Multi-day return compounds split effects
+  return_60d: HIGH
+  valuation_features: HIGH - Valuation uses price (market cap, P/E, etc.)
+  volatility_20d: MEDIUM
+  volatility_5d: MEDIUM - Volatility calculation uses price changes
+  volatility_60d: MEDIUM
+  volume_ratio_20d: LOW
+  volume_ratio_5d: LOW - Volume splits but ratio may be preserved
+  volume_zscore_20d: LOW
+  volume_zscore_5d: LOW
+
+
+======================================================================
+TARGET SENSITIVITY (CRITICAL)
+======================================================================
+TARGETS ARE AFFECTED BY RAW PRICES:
+  abnormal_return_1d: HIGH - Target returns use raw prices
+  abnormal_return_3d: HIGH - Target returns use raw prices
+  abnormal_return_5d: HIGH - Target returns use raw prices
+  benchmark_return_1d_after: HIGH - Target returns use raw prices
+  benchmark_return_3d_after: HIGH - Target returns use raw prices
+  benchmark_return_5d_after: HIGH - Target returns use raw prices
+  reaction_class: HIGH - Derived from abnormal_return_3d
+  return_1d_after: HIGH - Target returns use raw prices
+  return_3d_after: HIGH - Target returns use raw prices
+  return_5d_after: HIGH - Target returns use raw prices
+
+
+======================================================================
+POTENTIAL SPLIT DETECTION (Heuristic)
+======================================================================
+Note: Without actual corporate action data, we use extreme return
+values as proxy for potential split events.
+
+  distance_from_200dma_jumps:
+    Large jumps detected: 2
+    Max jump magnitude: 5.4176
+
+  distance_from_20dma_jumps:
+    Large jumps detected: 2
+    Max jump magnitude: 1.1601
+
+  distance_from_50dma_jumps:
+    Large jumps detected: 2
+    Max jump magnitude: 2.3883
+
+  return_10d:
+    Extreme low (0.1%): -80.22%
+    Extreme high (99.9%): 101.25%
+
+  return_1d:
+    Extreme low (0.1%): -12.98%
+    Extreme high (99.9%): 16.81%
+
+  return_3d:
+    Extreme low (0.1%): -16.78%
+    Extreme high (99.9%): 18.35%
+
+  return_5d:
+    Extreme low (0.1%): -17.85%
+    Extreme high (99.9%): 20.79%
+
+
+======================================================================
+BENCHMARK (NIFTYBEES) INTEGRITY
+======================================================================
+
+  benchmark_return_1d_after:
+    Mean: 0.000423, Std: 0.008585
+    Range: [-0.051641, 0.043942]
+    Extreme (0.1%/99.9%): [-0.032447, 0.031752]
+
+  benchmark_return_3d_after:
+    Mean: 0.000680, Std: 0.014625
+    Range: [-0.054521, 0.079124]
+    Extreme (0.1%/99.9%): [-0.051593, 0.057399]
+
+  benchmark_return_5d_after:
+    Mean: 0.002499, Std: 0.019707
+    Range: [-0.064047, 0.100613]
+    Extreme (0.1%/99.9%): [-0.062057, 0.100613]
+
+  relative_return_10d:
+    Mean: 0.004992, Std: 0.118630
+    Range: [-0.798922, 4.024781]
+    Extreme (0.1%/99.9%): [-0.773537, 1.002269]
+
+  relative_return_1d:
+    Mean: 0.001146, Std: 0.029870
+    Range: [-0.212138, 0.187228]
+    Extreme (0.1%/99.9%): [-0.133577, 0.168249]
+
+  relative_return_20d:
+    Mean: 0.011391, Std: 0.343574
+    Range: [-9.001225, 8.457109]
+    Extreme (0.1%/99.9%): [-0.780446, 4.235018]
+
+  relative_return_3d:
+    Mean: 0.002242, Std: 0.037441
+    Range: [-0.198860, 0.195353]
+    Extreme (0.1%/99.9%): [-0.157362, 0.166770]
+
+  relative_return_5d:
+    Mean: 0.003274, Std: 0.043033
+    Range: [-0.232150, 0.201118]
+    Extreme (0.1%/99.9%): [-0.180189, 0.185472]
+
+  relative_return_60d:
+    Mean: 0.026924, Std: 0.293309
+    Range: [-0.936246, 8.078934]
+    Extreme (0.1%/99.9%): [-0.795432, 4.285408]
+
+
+======================================================================
+VALUATION FEATURES (Price-Dependent)
+======================================================================
+
+  val_earnings_yield:
+    Missing: 69.7%
+    Mean: 0.03, Std: 0.03
+    Range: [-0.05, 0.22]
+
+  val_ev:
+    Missing: 74.8%
+    Mean: 5076207583081.18, Std: 6142562388853.63
+    Range: [556678254977.92, 50065944473631.50]
+
+  val_ev_ebitda:
+    Missing: 95.8%
+    Mean: 282.96, Std: 952.33
+    Range: [-268.28, 5051.55]
+
+  val_market_cap:
+    Missing: 69.2%
+    Mean: 4302688980068.04, Std: 5376452644478.77
+    Range: [561339054977.92, 47955257073631.50]
+
+  val_pb:
+    Missing: 74.2%
+    Mean: 24.98, Std: 98.86
+    Range: [-27.16, 771.65]
+
+  val_pcf:
+    Missing: 98.9%
+    Mean: 1161.90, Std: 2274.57
+    Range: [41.16, 6684.54]
+
+  val_pe:
+    Missing: 69.7%
+    Mean: 181.09, Std: 749.52
+    Range: [-1755.73, 7872.50]
+
+  val_ps:
+    Missing: 89.4%
+    Mean: 42.56, Std: 155.89
+    Range: [1.23, 1306.47]
+
+
+======================================================================
+CORPORATE ACTION SENSITIVE PERIODS (Known from Literature)
+======================================================================
+Major known corporate actions in NIFTY 50 universe (approximate):
+- HDFC Bank: 1:1 bonus (2011), 1:1 split (2019)
+- Reliance: 1:1 bonus (2017, 2023), rights issue (2020)
+- ICICI Bank: 1:10 split (2017), bonus (2018)
+- TCS: 1:1 bonus (2018), buyback (multiple)
+- Infosys: 1:1 bonus (2014, 2018), buyback (multiple)
+- HUL: 1:1 bonus (2016)
+- ITC: 1:10 split (2015), bonus (2016)
+- L&T: 1:5 split (2011)
+- SBI: 1:10 split (2014)
+- Kotak Bank: 1:1 bonus (2018)
+
+These events create artificial price drops of 50% (1:1 split/bonus)
+or 90% (1:10 split) that appear as massive negative returns in raw data.
+
+======================================================================
+IMPACT ASSESSMENT
+======================================================================
+HIGH PRIORITY BEFORE PRODUCTION:
+- All return features (return_*, relative_return_*) affected
+- All MA distance features affected
+- All drawdown features affected
+- Valuation features (market cap, P/E, etc.) affected
+- TARGETS (abnormal_return_*, return_*_after) affected
+
+This means BOTH features AND labels contain corporate action noise.
+
+RECOMMENDATION:
+1. Document as RAW_UNADJUSTED (current state)
+2. For research: Acknowledge limitation, note specific events
+3. For production: Obtain corporate action data (NSE provides this)
+   and apply split/bonus adjustment factors to price series
+4. Alternative: Use yfinance adjusted close (but different methodology)
+
+DO NOT:
+- Fabricate adjustment factors
+- Zero-out extreme returns (they may be real)
+- Assume the effect "averages out"
+
+======================================================================
+STATUS: RAW_UNADJUSTED (Documented Limitation)
+======================================================================

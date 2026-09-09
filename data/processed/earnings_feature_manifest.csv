@@ -1,0 +1,161 @@
+feature_name,feature_group,description,point_in_time_rule,expected_dtype,missing_pct,is_target
+distance_from_200dma,market_ma_distance,distance_from_200dma,Price data up to feature_cutoff_date only,float64,8.09,False
+distance_from_20dma,market_ma_distance,distance_from_20dma,Price data up to feature_cutoff_date only,float64,1.11,False
+distance_from_50dma,market_ma_distance,distance_from_50dma,Price data up to feature_cutoff_date only,float64,2.54,False
+drawdown_from_20d_high,market_drawdown,drawdown_from_20d_high,Price data up to feature_cutoff_date only,float64,1.11,False
+drawdown_from_252d_high,market_drawdown,drawdown_from_252d_high,Price data up to feature_cutoff_date only,float64,10.36,False
+drawdown_from_60d_high,market_drawdown,drawdown_from_60d_high,Price data up to feature_cutoff_date only,float64,2.59,False
+fund_a_capex,fundamental_cashflow,fund_a_capex,Fundamental report period_end_date <= feature_cutoff_date,float64,76.48,False
+fund_a_cash,fundamental_balance,fund_a_cash,Fundamental report period_end_date <= feature_cutoff_date,float64,76.27,False
+fund_a_current_assets,fundamental_balance,fund_a_current_assets,Fundamental report period_end_date <= feature_cutoff_date,float64,81.08,False
+fund_a_current_liabilities,fundamental_balance,fund_a_current_liabilities,Fundamental report period_end_date <= feature_cutoff_date,float64,81.08,False
+fund_a_eps_diluted,fundamental_income,fund_a_eps_diluted,Fundamental report period_end_date <= feature_cutoff_date,float64,76.32,False
+fund_a_equity,fundamental_balance,fund_a_equity,Fundamental report period_end_date <= feature_cutoff_date,float64,76.32,False
+fund_a_free_cash_flow,fundamental_balance,fund_a_free_cash_flow,Fundamental report period_end_date <= feature_cutoff_date,float64,76.32,False
+fund_a_gross_profit,fundamental_income,fund_a_gross_profit,Fundamental report period_end_date <= feature_cutoff_date,float64,81.03,False
+fund_a_long_term_debt,fundamental_balance,fund_a_long_term_debt,Fundamental report period_end_date <= feature_cutoff_date,float64,81.08,False
+fund_a_net_income,fundamental_income,fund_a_net_income,Fundamental report period_end_date <= feature_cutoff_date,float64,76.32,False
+fund_a_operating_cash_flow,fundamental_balance,fund_a_operating_cash_flow,Fundamental report period_end_date <= feature_cutoff_date,float64,77.27,False
+fund_a_operating_income,fundamental_income,fund_a_operating_income,Fundamental report period_end_date <= feature_cutoff_date,float64,81.03,False
+fund_a_revenue,fundamental_income,fund_a_revenue,Fundamental report period_end_date <= feature_cutoff_date,float64,76.32,False
+fund_a_shares_outstanding,fundamental_balance,fund_a_shares_outstanding,Fundamental report period_end_date <= feature_cutoff_date,float64,76.32,False
+fund_a_total_assets,fundamental_balance,fund_a_total_assets,Fundamental report period_end_date <= feature_cutoff_date,float64,76.32,False
+fund_a_total_debt,fundamental_balance,fund_a_total_debt,Fundamental report period_end_date <= feature_cutoff_date,float64,76.8,False
+fund_asset_turnover,fundamental_balance,Asset turnover,Fundamental report period_end_date <= feature_cutoff_date,float64,94.08,False
+fund_capex,fundamental_cashflow,Quarterly capex,Fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+fund_cash,fundamental_balance,Quarterly cash,Fundamental report period_end_date <= feature_cutoff_date,float64,93.34,False
+fund_cash_and_sti,fundamental_balance,Quarterly cash,Fundamental report period_end_date <= feature_cutoff_date,float64,94.66,False
+fund_cash_to_debt,fundamental_balance,Quarterly cash,Fundamental report period_end_date <= feature_cutoff_date,float64,93.66,False
+fund_cf_net_income,fundamental_income,fund_cf_net_income,Fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+fund_change_in_working_capital,fundamental_balance,fund_change_in_working_capital,Fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+fund_cost_of_revenue,fundamental_income,fund_cost_of_revenue,Fundamental report period_end_date <= feature_cutoff_date,float64,91.91,False
+fund_current_assets,fundamental_balance,fund_current_assets,Fundamental report period_end_date <= feature_cutoff_date,float64,95.4,False
+fund_current_debt,fundamental_balance,fund_current_debt,Fundamental report period_end_date <= feature_cutoff_date,float64,95.61,False
+fund_current_liabilities,fundamental_balance,fund_current_liabilities,Fundamental report period_end_date <= feature_cutoff_date,float64,95.4,False
+fund_current_ratio,fundamental_derived,Current ratio,Fundamental report period_end_date <= feature_cutoff_date,float64,95.4,False
+fund_debt_to_equity,fundamental_balance,Debt to equity,Fundamental report period_end_date <= feature_cutoff_date,float64,93.66,False
+fund_depreciation_amortization,fundamental_cashflow,fund_depreciation_amortization,Fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+fund_ebit,fundamental_income,Quarterly EBIT,Fundamental report period_end_date <= feature_cutoff_date,float64,91.38,False
+fund_ebitda,fundamental_income,Quarterly EBIT,Fundamental report period_end_date <= feature_cutoff_date,float64,91.6,False
+fund_ebitda_margin,fundamental_income,Quarterly EBIT,Fundamental report period_end_date <= feature_cutoff_date,float64,91.6,False
+fund_eps_basic,fundamental_income,Quarterly basic EPS,Fundamental report period_end_date <= feature_cutoff_date,float64,89.53,False
+fund_eps_diluted,fundamental_income,Quarterly diluted EPS,Fundamental report period_end_date <= feature_cutoff_date,float64,89.48,False
+fund_eps_growth_qoq,fundamental_income,fund_eps_growth_qoq,Fundamental report period_end_date <= feature_cutoff_date,float64,92.49,False
+fund_eps_growth_yoy,fundamental_income,fund_eps_growth_yoy,Fundamental report period_end_date <= feature_cutoff_date,float64,99.47,False
+fund_equity,fundamental_balance,Quarterly equity,Fundamental report period_end_date <= feature_cutoff_date,float64,93.39,False
+fund_fcf_margin,fundamental_income,FCF margin,Fundamental report period_end_date <= feature_cutoff_date,float64,99.0,False
+fund_fcf_to_debt,fundamental_balance,fund_fcf_to_debt,Fundamental report period_end_date <= feature_cutoff_date,float64,99.0,False
+fund_financing_cash_flow,fundamental_balance,fund_financing_cash_flow,Fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+fund_free_cash_flow,fundamental_balance,Quarterly free cash flow,Fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+fund_gross_profit,fundamental_income,Quarterly gross profit,Fundamental report period_end_date <= feature_cutoff_date,float64,91.81,False
+fund_interest_expense,fundamental_income,fund_interest_expense,Fundamental report period_end_date <= feature_cutoff_date,float64,89.9,False
+fund_interest_income,fundamental_income,fund_interest_income,Fundamental report period_end_date <= feature_cutoff_date,float64,97.36,False
+fund_investing_cash_flow,fundamental_balance,fund_investing_cash_flow,Fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+fund_long_term_debt,fundamental_balance,fund_long_term_debt,Fundamental report period_end_date <= feature_cutoff_date,float64,95.4,False
+fund_net_debt,fundamental_balance,fund_net_debt,Fundamental report period_end_date <= feature_cutoff_date,float64,94.98,False
+fund_net_income,fundamental_income,Quarterly net income,Fundamental report period_end_date <= feature_cutoff_date,float64,89.38,False
+fund_net_income_common,fundamental_income,Quarterly net income,Fundamental report period_end_date <= feature_cutoff_date,float64,89.53,False
+fund_net_income_growth_qoq,fundamental_income,Quarterly net income,Fundamental report period_end_date <= feature_cutoff_date,float64,92.07,False
+fund_net_income_growth_yoy,fundamental_income,Quarterly net income,Fundamental report period_end_date <= feature_cutoff_date,float64,99.58,False
+fund_net_margin,fundamental_income,Net margin,Fundamental report period_end_date <= feature_cutoff_date,float64,89.38,False
+fund_normalized_ebitda,fundamental_income,fund_normalized_ebitda,Fundamental report period_end_date <= feature_cutoff_date,float64,91.6,False
+fund_normalized_income,fundamental_income,fund_normalized_income,Fundamental report period_end_date <= feature_cutoff_date,float64,89.38,False
+fund_operating_cash_flow,fundamental_balance,Quarterly operating cash flow,Fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+fund_operating_expense,fundamental_income,fund_operating_expense,Fundamental report period_end_date <= feature_cutoff_date,float64,90.43,False
+fund_operating_income,fundamental_income,Quarterly operating income,Fundamental report period_end_date <= feature_cutoff_date,float64,91.6,False
+fund_operating_margin,fundamental_income,Operating margin,Fundamental report period_end_date <= feature_cutoff_date,float64,91.65,False
+fund_operating_revenue,fundamental_income,fund_operating_revenue,Fundamental report period_end_date <= feature_cutoff_date,float64,89.75,False
+fund_pretax_income,fundamental_income,fund_pretax_income,Fundamental report period_end_date <= feature_cutoff_date,float64,89.38,False
+fund_retained_earnings,fundamental_balance,fund_retained_earnings,Fundamental report period_end_date <= feature_cutoff_date,float64,94.56,False
+fund_revenue,fundamental_income,Quarterly revenue,Fundamental report period_end_date <= feature_cutoff_date,float64,89.38,False
+fund_revenue_growth_qoq,fundamental_income,Quarterly revenue,Fundamental report period_end_date <= feature_cutoff_date,float64,92.07,False
+fund_revenue_growth_yoy,fundamental_income,Quarterly revenue,Fundamental report period_end_date <= feature_cutoff_date,float64,99.58,False
+fund_roa,fundamental_derived,Return on assets,Fundamental report period_end_date <= feature_cutoff_date,float64,94.08,False
+fund_roce,fundamental_derived,Return on capital employed,Fundamental report period_end_date <= feature_cutoff_date,float64,95.82,False
+fund_roe,fundamental_derived,Return on equity,Fundamental report period_end_date <= feature_cutoff_date,float64,94.08,False
+fund_sga,fundamental_income,fund_sga,Fundamental report period_end_date <= feature_cutoff_date,float64,97.41,False
+fund_shares_basic,fundamental_balance,fund_shares_basic,Fundamental report period_end_date <= feature_cutoff_date,float64,89.53,False
+fund_shares_diluted,fundamental_balance,fund_shares_diluted,Fundamental report period_end_date <= feature_cutoff_date,float64,89.53,False
+fund_shares_outstanding,fundamental_balance,fund_shares_outstanding,Fundamental report period_end_date <= feature_cutoff_date,float64,93.13,False
+fund_tax_provision,fundamental_income,fund_tax_provision,Fundamental report period_end_date <= feature_cutoff_date,float64,89.38,False
+fund_total_assets,fundamental_balance,Quarterly total assets,Fundamental report period_end_date <= feature_cutoff_date,float64,93.39,False
+fund_total_debt,fundamental_balance,Quarterly total debt,Fundamental report period_end_date <= feature_cutoff_date,float64,93.66,False
+fund_total_equity,fundamental_balance,fund_total_equity,Fundamental report period_end_date <= feature_cutoff_date,float64,93.39,False
+fund_total_liabilities,fundamental_balance,fund_total_liabilities,Fundamental report period_end_date <= feature_cutoff_date,float64,93.39,False
+fund_working_capital,fundamental_balance,fund_working_capital,Fundamental report period_end_date <= feature_cutoff_date,float64,95.4,False
+prior_abn_ret_1d_mean_2,prior_earnings,prior_abn_ret_1d_mean_2,Only prior earnings events (strictly before current period_ended),float64,5.07,False
+prior_abn_ret_1d_mean_4,prior_earnings,prior_abn_ret_1d_mean_4,Only prior earnings events (strictly before current period_ended),float64,3.75,False
+prior_abn_ret_1d_mean_8,prior_earnings,prior_abn_ret_1d_mean_8,Only prior earnings events (strictly before current period_ended),float64,4.97,False
+prior_abn_ret_1d_median_4,prior_earnings,prior_abn_ret_1d_median_4,Only prior earnings events (strictly before current period_ended),float64,3.75,False
+prior_abn_ret_1d_median_8,prior_earnings,prior_abn_ret_1d_median_8,Only prior earnings events (strictly before current period_ended),float64,4.97,False
+prior_abn_ret_1d_std_4,prior_earnings,prior_abn_ret_1d_std_4,Only prior earnings events (strictly before current period_ended),float64,6.08,False
+prior_abn_ret_1d_std_8,prior_earnings,prior_abn_ret_1d_std_8,Only prior earnings events (strictly before current period_ended),float64,7.24,False
+prior_abn_ret_3d_mean_2,prior_earnings,prior_abn_ret_3d_mean_2,Only prior earnings events (strictly before current period_ended),float64,5.07,False
+prior_abn_ret_3d_mean_4,prior_earnings,prior_abn_ret_3d_mean_4,Only prior earnings events (strictly before current period_ended),float64,3.75,False
+prior_abn_ret_3d_mean_8,prior_earnings,prior_abn_ret_3d_mean_8,Only prior earnings events (strictly before current period_ended),float64,4.97,False
+prior_abn_ret_3d_median_4,prior_earnings,prior_abn_ret_3d_median_4,Only prior earnings events (strictly before current period_ended),float64,3.75,False
+prior_abn_ret_3d_median_8,prior_earnings,prior_abn_ret_3d_median_8,Only prior earnings events (strictly before current period_ended),float64,4.97,False
+prior_abn_ret_3d_std_4,prior_earnings,prior_abn_ret_3d_std_4,Only prior earnings events (strictly before current period_ended),float64,6.08,False
+prior_abn_ret_3d_std_8,prior_earnings,prior_abn_ret_3d_std_8,Only prior earnings events (strictly before current period_ended),float64,7.24,False
+prior_abn_ret_5d_mean_2,prior_earnings,prior_abn_ret_5d_mean_2,Only prior earnings events (strictly before current period_ended),float64,5.07,False
+prior_abn_ret_5d_mean_4,prior_earnings,prior_abn_ret_5d_mean_4,Only prior earnings events (strictly before current period_ended),float64,3.75,False
+prior_abn_ret_5d_mean_8,prior_earnings,prior_abn_ret_5d_mean_8,Only prior earnings events (strictly before current period_ended),float64,4.97,False
+prior_abn_ret_5d_median_4,prior_earnings,prior_abn_ret_5d_median_4,Only prior earnings events (strictly before current period_ended),float64,3.75,False
+prior_abn_ret_5d_median_8,prior_earnings,prior_abn_ret_5d_median_8,Only prior earnings events (strictly before current period_ended),float64,4.97,False
+prior_abn_ret_5d_std_4,prior_earnings,prior_abn_ret_5d_std_4,Only prior earnings events (strictly before current period_ended),float64,6.08,False
+prior_abn_ret_5d_std_8,prior_earnings,prior_abn_ret_5d_std_8,Only prior earnings events (strictly before current period_ended),float64,7.24,False
+prior_avg_reaction_magnitude_2,prior_earnings,prior_avg_reaction_magnitude_2,Only prior earnings events (strictly before current period_ended),float64,5.07,False
+prior_avg_reaction_magnitude_4,prior_earnings,prior_avg_reaction_magnitude_4,Only prior earnings events (strictly before current period_ended),float64,3.75,False
+prior_avg_reaction_magnitude_8,prior_earnings,prior_avg_reaction_magnitude_8,Only prior earnings events (strictly before current period_ended),float64,4.97,False
+prior_days_since_last,prior_earnings,Days since last earnings,Only prior earnings events (strictly before current period_ended),float64,0.32,False
+prior_earnings_count,prior_earnings,Number of prior earnings events,Only prior earnings events (strictly before current period_ended),int64,0.0,False
+prior_last_abn_ret_1d,prior_earnings,prior_last_abn_ret_1d,Only prior earnings events (strictly before current period_ended),float64,6.66,False
+prior_last_abn_ret_3d,prior_earnings,prior_last_abn_ret_3d,Only prior earnings events (strictly before current period_ended),float64,6.66,False
+prior_last_abn_ret_5d,prior_earnings,prior_last_abn_ret_5d,Only prior earnings events (strictly before current period_ended),float64,6.66,False
+prior_last_reaction_class,prior_earnings,Last earnings reaction class,Only prior earnings events (strictly before current period_ended),str,6.66,False
+prior_negative_rate_4,prior_earnings,prior_negative_rate_4,Only prior earnings events (strictly before current period_ended),float64,1.43,False
+prior_negative_rate_8,prior_earnings,prior_negative_rate_8,Only prior earnings events (strictly before current period_ended),float64,2.7,False
+prior_neutral_rate_4,prior_earnings,prior_neutral_rate_4,Only prior earnings events (strictly before current period_ended),float64,1.43,False
+prior_neutral_rate_8,prior_earnings,prior_neutral_rate_8,Only prior earnings events (strictly before current period_ended),float64,2.7,False
+prior_positive_rate_4,prior_earnings,prior_positive_rate_4,Only prior earnings events (strictly before current period_ended),float64,1.43,False
+prior_positive_rate_8,prior_earnings,prior_positive_rate_8,Only prior earnings events (strictly before current period_ended),float64,2.7,False
+prior_reaction_streak,prior_earnings,Consecutive same reaction count,Only prior earnings events (strictly before current period_ended),float64,0.32,False
+prior_reaction_trend_4,prior_earnings,prior_reaction_trend_4,Only prior earnings events (strictly before current period_ended),float64,6.08,False
+prior_reaction_trend_8,prior_earnings,prior_reaction_trend_8,Only prior earnings events (strictly before current period_ended),float64,7.24,False
+relative_return_10d,market_relative,relative_return_10d,Price data up to feature_cutoff_date only,float64,0.16,False
+relative_return_1d,market_relative,relative_return_1d,Price data up to feature_cutoff_date only,float64,0.0,False
+relative_return_20d,market_relative,relative_return_20d,Price data up to feature_cutoff_date only,float64,1.37,False
+relative_return_3d,market_relative,relative_return_3d,Price data up to feature_cutoff_date only,float64,0.0,False
+relative_return_5d,market_relative,relative_return_5d,Price data up to feature_cutoff_date only,float64,0.0,False
+relative_return_60d,market_relative,relative_return_60d,Price data up to feature_cutoff_date only,float64,2.59,False
+return_10d,market_returns,return_10d,Price data up to feature_cutoff_date only,float64,0.16,False
+return_1d,market_returns,return_1d,Price data up to feature_cutoff_date only,float64,0.0,False
+return_20d,market_returns,return_20d,Price data up to feature_cutoff_date only,float64,1.37,False
+return_3d,market_returns,return_3d,Price data up to feature_cutoff_date only,float64,0.0,False
+return_5d,market_returns,return_5d,Price data up to feature_cutoff_date only,float64,0.0,False
+return_60d,market_returns,return_60d,Price data up to feature_cutoff_date only,float64,2.59,False
+val_earnings_yield,valuation,val_earnings_yield,Price at feature_cutoff_date + fundamental report period_end_date <= feature_cutoff_date,float64,69.71,False
+val_ev,valuation,Enterprise value,Price at feature_cutoff_date + fundamental report period_end_date <= feature_cutoff_date,float64,74.84,False
+val_ev_ebitda,valuation,EV/EBITDA,Price at feature_cutoff_date + fundamental report period_end_date <= feature_cutoff_date,float64,95.82,False
+val_market_cap,valuation,Market capitalization,Price at feature_cutoff_date + fundamental report period_end_date <= feature_cutoff_date,float64,69.24,False
+val_pb,valuation,P/B ratio,Price at feature_cutoff_date + fundamental report period_end_date <= feature_cutoff_date,float64,74.21,False
+val_pcf,valuation,P/CF ratio,Price at feature_cutoff_date + fundamental report period_end_date <= feature_cutoff_date,float64,98.94,False
+val_pe,valuation,P/E ratio,Price at feature_cutoff_date + fundamental report period_end_date <= feature_cutoff_date,float64,69.71,False
+val_ps,valuation,P/S ratio,Price at feature_cutoff_date + fundamental report period_end_date <= feature_cutoff_date,float64,89.38,False
+volatility_20d,market_volatility,volatility_20d,Price data up to feature_cutoff_date only,float64,1.37,False
+volatility_5d,market_volatility,volatility_5d,Price data up to feature_cutoff_date only,float64,0.0,False
+volatility_60d,market_volatility,volatility_60d,Price data up to feature_cutoff_date only,float64,2.59,False
+volume_ratio_20d,market_volume,volume_ratio_20d,Price data up to feature_cutoff_date only,float64,1.11,False
+volume_ratio_5d,market_volume,volume_ratio_5d,Price data up to feature_cutoff_date only,float64,0.0,False
+volume_zscore_20d,market_volume,volume_zscore_20d,Price data up to feature_cutoff_date only,float64,1.11,False
+volume_zscore_5d,market_volume,volume_zscore_5d,Price data up to feature_cutoff_date only,float64,0.0,False
+reaction_class,target,Target: reaction_class,POST-event (never use as feature),str,0.0,True
+abnormal_return_1d,target,Target: abnormal_return_1d,POST-event (never use as feature),float64,0.0,True
+abnormal_return_3d,target,Target: abnormal_return_3d,POST-event (never use as feature),float64,0.0,True
+abnormal_return_5d,target,Target: abnormal_return_5d,POST-event (never use as feature),float64,0.11,True
+return_1d_after,target,Target: return_1d_after,POST-event (never use as feature),float64,0.0,True
+return_3d_after,target,Target: return_3d_after,POST-event (never use as feature),float64,0.0,True
+return_5d_after,target,Target: return_5d_after,POST-event (never use as feature),float64,0.11,True
+benchmark_return_1d_after,target,Target: benchmark_return_1d_after,POST-event (never use as feature),float64,0.0,True
+benchmark_return_3d_after,target,Target: benchmark_return_3d_after,POST-event (never use as feature),float64,0.0,True
+benchmark_return_5d_after,target,Target: benchmark_return_5d_after,POST-event (never use as feature),float64,0.11,True

@@ -1,0 +1,14 @@
+audit_item,detail,value,issue
+current_split_method,period_ended_based,period_ended,Uses fiscal quarter end instead of announcement date
+announcement_vs_period_end,early_announcements,2,Events announced before period end (advance/board events)
+announcement_vs_period_end,late_announcements,1,Events announced >90 days after period end
+announcement_vs_period_end,median_days_to_announcement,30.0,
+label_window_contamination,TRAIN_1d_after,47,4.12% of TRAIN events have label window crossing boundary
+label_window_contamination,TRAIN_3d_after,47,4.12% of TRAIN events have label window crossing boundary
+label_window_contamination,TRAIN_5d_after,47,4.12% of TRAIN events have label window crossing boundary
+label_window_contamination,VAL_1d_after,50,14.04% of VAL events have label window crossing boundary
+label_window_contamination,VAL_3d_after,50,14.04% of VAL events have label window crossing boundary
+label_window_contamination,VAL_5d_after,50,14.04% of VAL events have label window crossing boundary
+feature_cutoff_check,violations,0,feature_cutoff > announcement (should be 0)
+proposed_walkforward_fold,fold_1,train=946_val=378_embargo=0,"train: 2016-01-12 to 2021-02-10, val: 2021-02-11 to 2023-07-26"
+proposed_walkforward_fold,fold_2,train=1324_val=378_embargo=0,"train: 2016-01-12 to 2023-07-26, val: 2023-07-27 to 2025-08-05"

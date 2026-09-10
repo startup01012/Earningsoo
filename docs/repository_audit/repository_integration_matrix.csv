@@ -1,0 +1,43 @@
+repository,research_value,production_value,forecasting_value,sentiment_value,real_time_value,data_engineering_value,agent_value,backtesting_value,integration_complexity,compute_cost,license_risk,maintenance_risk,decision,rationale
+EarningsOS,High,High,High,Medium,High,High,Medium,High,Low,Medium,Low,Medium,integrate,Primary earnings/data research system with PIT and leakage audit artifacts
+OpenAlice,High,Medium,Low,Medium,Medium,Medium,High,Low,Medium,Medium,High,Medium,adapt,Useful local agent workspace and approval-gated trading patterns; experimental and AGPL
+Lumibot,Medium,Medium,Low,Low,High,Medium,High,High,Medium,Medium,Low,Medium,research,Python strategy/backtest/live framework; do not duplicate execution core
+NautilusTrader,Medium,High,Low,Low,High,High,Medium,High,High,Medium,Medium,Medium,integrate,Deterministic Rust-native event-driven research/live execution candidate
+Hummingbot,Medium,Medium,Low,Low,High,Medium,Medium,Medium,High,High,Low,Medium,optional,Strong exchange connectors and execution patterns but initial scope is NSE equities
+Freqtrade,Medium,Low,Low,Low,High,Medium,Medium,High,Medium,Medium,Low,Medium,optional,Crypto-focused and outside initial NSE scope
+Vibe-Trading,Medium,Low,Low,Medium,Medium,Low,High,Low,High,Medium,Unknown,Unknown,research,Agent/trading ideas require controlled evaluation
+MIT-TradingAgents,Medium,Low,Low,Medium,Low,Low,High,Low,High,Medium,Unknown,Medium,research,Useful multi-agent research patterns but not quantitative prediction authority
+FinRL,High,Low,Medium,Low,Medium,Medium,Medium,High,High,High,Low,Medium,research,RL research value but high validation burden and reward/market simulator sensitivity
+Backtrader,Medium,Medium,Low,Low,Medium,Medium,Low,High,Medium,Low,Low,Medium,benchmark,Mature event-driven reference; avoid parallel production engine
+CCXT,Medium,Medium,Low,Low,High,High,Low,Low,Medium,Low,Low,Medium,connector,Exchange API abstraction; not core India equity data source
+Polymarket API,Low,Low,Low,Low,Medium,Medium,Low,Low,Medium,Low,Medium,Medium,research,Alternative expectation signal only where legally/data-wise appropriate
+OpenWA,Low,Low,Low,Low,Medium,Low,Medium,Low,High,Medium,Unknown,High,isolate,Messaging automation not core financial intelligence
+Chronos,High,Medium,High,Low,Medium,Low,Low,High,High,High,Low,Medium,benchmark,Foundation time-series model requiring leakage-safe tournament
+TimesFM,High,Medium,High,Low,Medium,Low,Low,High,High,High,Unknown,Medium,benchmark,Forecasting benchmark candidate; validate on Indian data
+FinCast,High,Medium,High,Low,Medium,Low,Low,High,High,High,Unknown,Medium,benchmark,Financial forecasting research candidate
+Uni2TS,High,Medium,High,Low,Medium,Low,Low,High,High,High,Unknown,Medium,research,General time-series foundation ecosystem
+Timer-XL,Medium,Medium,High,Low,Medium,Low,Low,High,High,High,Unknown,Medium,research,Long-context forecasting candidate
+Financial-Time-Series,Medium,Low,High,Low,Low,Medium,Low,High,Medium,Medium,Unknown,Medium,benchmark,Research collection useful for baselines and feature ideas
+StockMixer,High,Medium,High,Low,Medium,Low,Low,High,Medium,Medium,Unknown,Medium,benchmark,Stock-specific prediction architecture worth controlled comparison
+StockCL,High,Medium,High,Low,Medium,Low,Low,High,High,Medium,Unknown,Medium,research,Contrastive representation learning candidate
+Kronos,High,Medium,High,Low,Medium,Low,Low,High,High,High,Unknown,Medium,benchmark,Financial K-line foundation model candidate
+Kronos1,Medium,Low,High,Low,Medium,Low,Low,High,High,High,Unknown,Medium,research,Kronos lineage comparison target
+Conductor,High,Medium,High,Low,Medium,Medium,Low,High,Medium,Medium,Unknown,Medium,adapt,Fork history adds packaging/checkpoint/test/CI fixes; scientifically still Kronos lineage
+FinGPT,High,Medium,Low,High,Medium,Medium,High,Low,High,High,Unknown,Medium,research,Financial LLM/evidence processing; numerical prediction not primary
+FinLLMs,High,Low,Low,High,Low,Medium,Medium,Low,High,High,Unknown,Medium,research,Financial LLM research collection
+PIXIU,High,Low,Low,High,Low,Medium,Medium,Low,High,High,Unknown,Medium,benchmark,Financial instruction/LLM evaluation ecosystem
+FLANG,High,Low,Low,High,Low,Medium,Medium,Low,High,High,Unknown,Medium,benchmark,Financial NLP research candidate
+InvestLM,Medium,Low,Low,High,Low,Low,Medium,Low,High,High,Unknown,Medium,research,Investment-language research only
+FinVis-GPT,Medium,Low,Low,Medium,Low,Low,Medium,Low,High,High,Unknown,Medium,research,Multimodal financial document/chart research
+FinBERT,High,Medium,Low,High,Medium,Medium,Low,Medium,Low,Low,Low,Medium,integrate,Strong simple financial sentiment baseline with explicit three-class output
+Kimi-K3,Medium,Low,Low,Medium,Low,Low,High,Low,High,High,Unknown,Medium,research,General LLM research; too costly/uncertain for primary quant path
+Kimi-K3-in-C,Medium,Medium,Low,Low,High,High,Low,Low,High,Medium,Unknown,Medium,research,Runtime/performance engineering rather than finance model
+Crucix,Medium,Low,Low,Medium,Medium,High,High,Low,High,Medium,Unknown,High,research,Potential intelligence value but requires deep source/security audit
+Hermes-Agent,High,Medium,Low,Medium,High,Medium,High,Low,High,High,Unknown,Medium,sandbox,Agent runtime and governance patterns; no autonomous production trading authority
+Shannon,Medium,Medium,Low,Low,Low,High,Low,Low,High,Medium,Unknown,Medium,security,Security/SAST toolchain; never part of prediction path
+Numbat,Medium,Low,Low,Low,Medium,Medium,Medium,Low,High,Medium,Unknown,High,security,Potential observability/security utility; deeper audit required
+Skfolio,High,High,Low,Low,Medium,Medium,Low,High,Medium,Low,Low,Medium,integrate,Risk and portfolio optimization layer after validated predictions
+VectorBT,High,Medium,Medium,Low,Medium,High,Medium,High,Medium,Low,Low,Medium,research,Fast vectorized research/backtesting; use as research engine not execution authority
+Ornith-1,Medium,Low,Low,Medium,Medium,Low,High,Low,High,Medium,Unknown,Unknown,research,Potential agent/intelligence utility requires source audit
+FreeDomain,Low,Low,Low,Low,Low,Low,Low,Low,High,Low,Unknown,Unknown,reject,No demonstrated value for core MarketAI quant intelligence
+Turbo-Fieldfare,Medium,Medium,Low,Low,Medium,High,Low,Low,Medium,Medium,Unknown,Medium,optional,Potential local inference/runtime support only
